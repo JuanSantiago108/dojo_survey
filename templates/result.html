@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for( 'static', filename='style.css' )}}">
+    <title>Todo Form</title>
+</head>
+    <body>
+        <h1>
+            Submitted Info {{ first_name }}
+        </h1>
+        <div>
+            <ul>
+                <li><label for="fname">Your Name:</label>{{session["new_info"]["fname"]}}</li>
+                <li><label for="dojo_loaction">Dojo Location:</label>{{session["new_info"]["dojo_loaction"]}}</li>
+                <li><label for="favorite_language">Favorite Language:</label>{{session["new_info"]["favorite_language"]}}</li>
+                <li><label for="commit">Comment (optional):</label>{{session["new_info"]["commit"]}}</li>
+            </ul>
+        </div>
+        <div class="main">
+            <a href="/result"><button type="submit">Go Back</button></a>
+        </div>
+    </body>
+</html>
+
